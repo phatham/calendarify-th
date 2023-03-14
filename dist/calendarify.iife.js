@@ -28,16 +28,16 @@ l.version="2.29.4",B(R),l.fn=h,l.min=$r,l.max=Vr,l.now=Gr,l.utc=he,l.unix=go,l.m
       </ul>
     </nav>
     <div class="calendarify__calendar">
-      <ul class="days-wrapper wrapper">
+      <ul class="days-wrapper">
       ${(f=(m=this.locale.lang)==null?void 0:m.weekdays)==null?void 0:f.map(_=>`<li>${_.slice(0,3)}</li>`).join("")}
       </ul>
-      <ul class="dates-wrapper wrapper">
+      <ul class="dates-wrapper">
           ${this.dates.map(_=>`<li><button ${_.disabled?"disabled":""} type="button" class="date-button ${this.getHolidayClass({date:_.date,nowMonth:this.nowMonth})} ${this.nowDay==String(_.date)?"active":""}">${_.date}</button></li>`).join("")}
       </ul>
-      <ul class="months-wrapper wrapper d-none">
+      <ul class="months-wrapper d-none">
         ${this.months.map((_,w)=>{var O,b,T;const k=((O=this.locale.lang)==null?void 0:O.shortMonths)==null?(b=this.locale.lang)==null?void 0:b.months[w].slice(0,3):(T=this.locale.lang)==null?void 0:T.shortMonths[w],S=l().format("M");return`<li><button class="${_==S?"active":""}" data-date="${_}" type="button">${k}</button></li>`}).join("")}
       </ul>
-      <ul class="years-wrapper wrapper d-none">
+      <ul class="years-wrapper d-none">
         ${this.years.map(_=>`<li><button data-date="${_}" type="button">${_}</button></li>`).join("")}
       </ul>
     </div>
