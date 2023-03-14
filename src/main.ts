@@ -147,7 +147,7 @@ export default class Calendarify {
       '.quick-actions button'
     ) as NodeListOf<HTMLButtonElement>;
     this._wrapperEls = this._calendarWrapper.querySelectorAll(
-      '.wrapper:not(:last-child, :nth-child(3))'
+      '.calendarify-wrapper:not(:last-child, :nth-child(3))'
     ) as NodeListOf<HTMLAreaElement>;
     this._yearRangeButton = this._container.querySelector(
       '.calendarify__navigations button[data-action="year-range"]'

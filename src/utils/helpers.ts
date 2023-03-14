@@ -54,14 +54,14 @@ export class Helpers {
       </ul>
     </nav>
     <div class="calendarify__calendar">
-      <ul class="days-wrapper">
+      <ul class="days-wrapper calendarify-wrapper">
       ${this.locale.lang?.weekdays
         ?.map((day) => {
           return `<li>${day.slice(0, 3)}</li>`;
         })
         .join('')}
       </ul>
-      <ul class="dates-wrapper">
+      <ul class="dates-wrapper calendarify-wrapper ">
           ${this.dates
             .map((date) => {
               return `<li><button ${
@@ -75,7 +75,7 @@ export class Helpers {
             })
             .join('')}
       </ul>
-      <ul class="months-wrapper d-none">
+      <ul class="months-wrapper calendarify-wrapper d-none">
         ${this.months
           .map((month, index) => {
             const monthShort =
@@ -89,7 +89,7 @@ export class Helpers {
           })
           .join('')}
       </ul>
-      <ul class="years-wrapper d-none">
+      <ul class="years-wrapper calendarify-wrapper d-none">
         ${this.years
           .map((year) => {
             return `<li><button data-date="${year}" type="button">${year}</button></li>`;

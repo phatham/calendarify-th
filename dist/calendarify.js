@@ -2990,23 +2990,23 @@ class gl {
       </ul>
     </nav>
     <div class="calendarify__calendar">
-      <ul class="days-wrapper">
+      <ul class="days-wrapper calendarify-wrapper">
       ${(c = (m = this.locale.lang) == null ? void 0 : m.weekdays) == null ? void 0 : c.map((_) => `<li>${_.slice(0, 3)}</li>`).join("")}
       </ul>
-      <ul class="dates-wrapper">
+      <ul class="dates-wrapper calendarify-wrapper ">
           ${this.dates.map((_) => `<li><button ${_.disabled ? "disabled" : ""} type="button" class="date-button ${this.getHolidayClass({
       date: _.date,
       nowMonth: this.nowMonth
     })} ${this.nowDay == String(_.date) ? "active" : ""}">${_.date}</button></li>`).join("")}
       </ul>
-      <ul class="months-wrapper d-none">
+      <ul class="months-wrapper calendarify-wrapper d-none">
         ${this.months.map((_, w) => {
       var O, x, T;
       const k = ((O = this.locale.lang) == null ? void 0 : O.shortMonths) == null ? (x = this.locale.lang) == null ? void 0 : x.months[w].slice(0, 3) : (T = this.locale.lang) == null ? void 0 : T.shortMonths[w], M = l().format("M");
       return `<li><button class="${_ == M ? "active" : ""}" data-date="${_}" type="button">${k}</button></li>`;
     }).join("")}
       </ul>
-      <ul class="years-wrapper d-none">
+      <ul class="years-wrapper calendarify-wrapper d-none">
         ${this.years.map((_) => `<li><button data-date="${_}" type="button">${_}</button></li>`).join("")}
       </ul>
     </div>
@@ -3113,7 +3113,7 @@ class kl {
     ), this._quickButtons = this._container.querySelectorAll(
       ".quick-actions button"
     ), this._wrapperEls = this._calendarWrapper.querySelectorAll(
-      ".wrapper:not(:last-child, :nth-child(3))"
+      ".calendarify-wrapper:not(:last-child, :nth-child(3))"
     ), this._yearRangeButton = this._container.querySelector(
       '.calendarify__navigations button[data-action="year-range"]'
     );
