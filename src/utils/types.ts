@@ -4,39 +4,40 @@ export interface Date {
 }
 
 interface Lang {
-  code?: string,
+  code?: string;
   ui?: {
     quickActions?: {
-      today?: string,
-      tomorrow?: string,
-      inTwoDays?: string
-    }
-  },
-  months?: string[],
-  weekdays?: string[]
+      today?: string;
+      tomorrow?: string;
+      inTwoDays?: string;
+    };
+  };
+  months?: string[];
+  shortMonths?: string[];
+  weekdays?: string[];
 }
 
 export interface Render {
-  container: HTMLAreaElement,
-  dates: Date[],
-  months: string[],
-  years: string[],
-  nowDay: string,
-  nowMonth: string,
-  quickActions: boolean,
-  locale: Locale
+  container: HTMLAreaElement;
+  dates: Date[];
+  months: string[];
+  years: string[];
+  nowDay: string;
+  nowMonth: string;
+  quickActions: boolean;
+  locale: Locale;
 }
 
 export interface Locale {
-    format?: string,
-    months?: string[],
-    weekdays?: string[],
-    lang?: Lang
+  format?: string;
+  months?: string[];
+  weekdays?: string[];
+  lang?: Lang;
 }
 
 export interface HolidayClass {
-  date: string,
-  nowMonth: string
+  date: string;
+  nowMonth: string;
 }
 
-export type ExpandedMode = "months" | "years";
+export type ExpandedMode = 'months' | 'years';
