@@ -55,7 +55,7 @@ export default class Calendarify {
 
     this.onChange = this.options.onChange;
     this._inputSelector = inputSelector;
-
+    this.yearOffset = this.options.yearOffset ?? 0;
     this.locale = {
       format: this.options?.locale?.format ?? this._systemFormat,
       lang: {
